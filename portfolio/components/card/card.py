@@ -2,16 +2,16 @@ import reflex as rx
 import portfolio.style.styles as styles
 
 
-def card(header: str, *args, **kwargs) -> rx.Component:
-    return rx.box(
-        rx.box(
-            rx.heading(
-                header,
-                style=styles.heading_title_style,
-            ),
-            rx.vstack(
-                *args,
-            ),
+def card(header: str, *content: rx, **css_style) -> rx.Component:
+    return rx.vstack(
+        rx.heading(
+            header,
+            style=styles.heading_title_style,
         ),
-        **kwargs,
+        rx.divider(),
+        rx.vstack(
+            *content,
+        ),
+        align_items="start",
+        **css_style,
     )
