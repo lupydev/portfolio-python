@@ -1,11 +1,6 @@
-*.db
-
-*.py[cod]
-
-.web
-
-__pycache__/
-
 venv/
-
 env/
+*.db
+*.py[cod]
+.web
+__pycache__/
