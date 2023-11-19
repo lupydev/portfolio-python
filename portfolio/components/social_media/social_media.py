@@ -1,22 +1,22 @@
 import reflex as rx
+import portfolio.style.styles as styles
+
+from portfolio.style.colors import Color
+from portfolio.style.styles import Size
 
 
-def social_media() -> rx.Component:
-    return rx.hstack(
-        rx.link(
-            rx.image(
-                src="https://i.postimg.cc/9FQcfjfX/signo-de-github.png",
-                height="30px",
-            ),
-            href="https://github.com/lumiguz",
-            is_external=True,
+def social_media(
+    image: str,
+    img_size: str,
+    url: str,
+) -> rx.Component:
+    return rx.link(
+        rx.image(
+            src=image,
+            height=img_size,
         ),
-        rx.link(
-            rx.image(
-                src="https://i.postimg.cc/c4k0g5KR/logotipo-de-linkedin.png",
-                height="30px",
-            ),
-            href="https://www.linkedin.com/in/lupy/",
-            is_external=True,
-        ),
+        href=url,
+        is_external=True,
+        justify_item="center",
+        style=styles.social_media,
     )
