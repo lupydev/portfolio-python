@@ -1,6 +1,8 @@
 import reflex as rx
 from datetime import date
-from portfolio.style.styles import Size
+from portfolio.components.image.image import img
+from portfolio.style.colors import Color
+import portfolio.style.styles as styles
 
 
 def footer() -> rx.Component:
@@ -10,29 +12,40 @@ def footer() -> rx.Component:
             rx.span(
                 "Python puro ",
                 font_weight="bold",
+                color=Color.SECUNDARY.value,
             ),
-            rx.span("con el framework: "),
+            "con el framework: ",
             rx.link(
                 "Reflex",
+                rx.icon(
+                    tag="external_link",
+                ),
                 href="https://reflex.dev/",
                 font_weight="bold",
+                color=Color.SECUNDARY.value,
                 text_decoration="underline",
             ),
-            margin_y=Size.ZERO.value,
+            margin_y=styles.Size.ZERO.value,
         ),
         rx.text(
-            f"© {date.today().year} hecho con ❤ por: ",
+            f"© {date.today().year} hecho con ",
+            rx.span(
+                "❤",
+                color=Color.PRIMARY.value,
+            ),
+            " por: ",
             rx.span(
                 "Lupy, ",
                 font_weight="bold",
+                color=Color.SECUNDARY.value,
             ),
             rx.span(
                 "de Colombia para el 🌎",
             ),
-            margin_y=Size.ZERO.value,
+            margin_y=styles.Size.ZERO.value,
         ),
-        margin_top=Size.VERY_BIG.value,
-        margin_bottom=Size.DEFAULT.value,
+        margin_top=styles.Size.VERY_BIG.value,
+        margin_bottom=styles.Size.DEFAULT.value,
         width="100%",
         id="footer",
     )
