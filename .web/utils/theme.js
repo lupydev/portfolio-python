@@ -1,1 +1,1 @@
-export default {"styles": {"global": {"body": {}}}}
+export default {"styles": {"global": {"body": {"fontFamily": "Studio-Feixen-Sans, Arial", "fontSize": "1.2em", "lineHeight": "1.5em", "backgroundColor": "#05192d", "color": "#9ba3ab"}}}}
