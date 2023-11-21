@@ -20,6 +20,8 @@ def project(
                 ),
                 position="relative",
                 padding=styles.Size.MEDIUM.value,
+                border_top_left_radius=styles.Size.SMALL.value,
+                border_bottom_left_radius=styles.Size.SMALL.value,
             ),
             rx.grid_item(
                 img(
@@ -30,6 +32,8 @@ def project(
                     border_top_right_radius=styles.Size.SMALL.value,
                     border_bottom_right_radius=styles.Size.SMALL.value,
                 ),
+                border_top_right_radius=styles.Size.SMALL.value,
+                border_bottom_right_radius=styles.Size.SMALL.value,
             ),
             template_columns="repeat(2, 1fr)",
             width="100%",
