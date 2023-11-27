@@ -7,6 +7,7 @@ import portfolio.style.styles as styles
 
 def footer() -> rx.Component:
     return rx.vstack(
+        rx.divider(),
         rx.text(
             "Esta web fue creada en ",
             rx.span(
@@ -44,8 +45,6 @@ def footer() -> rx.Component:
             ),
             margin_y=styles.Size.ZERO.value,
         ),
-        margin_top=styles.Size.VERY_BIG.value,
-        margin_bottom=styles.Size.DEFAULT.value,
-        width="100%",
+        style=styles.footer,
         id="footer",
     )
