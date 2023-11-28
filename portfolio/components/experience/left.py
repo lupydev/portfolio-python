@@ -4,14 +4,14 @@ import portfolio.style.styles as styles
 
 
 def experience_left(
-    position: str,
+    title_position: str,
     company: str,
     date: str,
     *list_icon: rx,
 ) -> rx.Component:
     return rx.vstack(
         rx.heading(
-            position,
+            title_position,
             style=styles.heading_title_style,
         ),
         rx.text(
@@ -36,5 +36,6 @@ def experience_left(
         align_items="end",
         border_bottom_right_radius=styles.Size.DEFAULT.value,
         border_right=f"0.3em solid {Color.PRIMARY.value}",
+        border_bottom=f"0.3em solid {Color.PRIMARY.value}",
         text_align="end",
     )
