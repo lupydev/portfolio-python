@@ -25,9 +25,9 @@ def navbar() -> rx.Component:
                 rx.link(
                     rx.hstack(
                         rx.image(
-                            src="lupy.png",
-                            height=styles.Size.XL.value,
-                            width="auto",
+                            src="favicon.ico",
+                            height=styles.Size.LARGE.value,
+                            width=styles.Size.LARGE.value,
                         ),
                         rx.heading(
                             "Lupy",
@@ -58,13 +58,55 @@ def navbar() -> rx.Component:
                         href="#contacto",
                     ),
                 ),
-                style=styles.navbar,
                 justify="space-between",
                 padding_x=Size.EXTREME_BIG.value,
                 padding_y=Size.DEFAULT.value,
             ),
         ),
-        rx.mobile_and_tablet(
+        rx.tablet_only(
+            rx.hstack(
+                rx.link(
+                    rx.hstack(
+                        rx.image(
+                            src="favicon.ico",
+                            height=styles.Size.LARGE.value,
+                            width=styles.Size.LARGE.value,
+                        ),
+                        rx.heading(
+                            "Lupy",
+                            style=styles.navbar_title_style,
+                        ),
+                    ),
+                    href="",
+                ),
+                rx.hstack(
+                    rx.link(
+                        "Portafolio",
+                        margin_left=Size.ZERO.value,
+                        padding_x=Size.SMALL.value,
+                        style=styles.border_right,
+                        href="#portafolio",
+                    ),
+                    rx.link(
+                        "Experiencia",
+                        margin_left=Size.ZERO.value,
+                        padding_x=Size.SMALL.value,
+                        style=styles.border_right,
+                        href="#experiencia",
+                    ),
+                    rx.link(
+                        "Contacto",
+                        margin_left=Size.ZERO.value,
+                        padding_x=Size.SMALL.value,
+                        href="#contacto",
+                    ),
+                ),
+                justify="space-between",
+                padding_x=Size.LARGE.value,
+                padding_y=Size.DEFAULT.value,
+            ),
+        ),
+        rx.mobile_only(
             rx.hstack(
                 rx.link(
                     rx.hstack(
@@ -149,10 +191,11 @@ def navbar() -> rx.Component:
                         close_on_overlay_click=True,
                     ),
                 ),
-                style=styles.navbar,
                 justify="space-between",
                 padding_x=Size.DEFAULT.value,
                 padding_y=Size.DEFAULT.value,
-            )
+            ),
         ),
+        style=styles.navbar,
+        box_shadow=f"1px 0 4px {Color.PRIMARY_LIGHT.value}",
     )
