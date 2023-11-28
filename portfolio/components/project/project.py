@@ -12,38 +12,89 @@ def project(
     *card_body: rx,
 ) -> rx.Component:
     return rx.box(
-        rx.grid(
-            rx.grid_item(
-                card(
-                    title,
-                    *card_body,
+        rx.desktop_only(
+            rx.grid(
+                rx.grid_item(
+                    card(
+                        title,
+                        *card_body,
+                    ),
+                    position="relative",
+                    padding=styles.Size.MEDIUM.value,
+                    border_top_left_radius=styles.Size.SMALL.value,
+                    border_bottom_left_radius=styles.Size.SMALL.value,
                 ),
-                position="relative",
-                padding=styles.Size.MEDIUM.value,
-                border_top_left_radius=styles.Size.SMALL.value,
-                border_bottom_left_radius=styles.Size.SMALL.value,
-            ),
-            rx.grid_item(
-                img(
-                    img_url,
-                    img_alt,
-                    opacity="0.7",
-                    bg=Color.PRIMARY.value,
-                    border_top_right_radius=styles.Size.SMALL.value,
-                    border_bottom_right_radius=styles.Size.SMALL.value,
+                rx.grid_item(
+                    img(
+                        img_url,
+                        img_alt,
+                        opacity="0.7",
+                        bg=Color.PRIMARY.value,
+                    ),
                 ),
-                border_top_right_radius=styles.Size.SMALL.value,
-                border_bottom_right_radius=styles.Size.SMALL.value,
+                template_columns="repeat(2, 1fr)",
+                max_width="40em",
+                height="100%",
+                style=styles.container_project,
+                border=f"0.2em solid {Color.SECUNDARY.value}",
             ),
-            template_columns="repeat(2, 1fr)",
-            width="100%",
-            height="100%",
-            border_radius=styles.Size.SMALL.value,
-            margin_top=styles.Size.DEFAULT.value,
-            margin_left=styles.Size.DEFAULT.value,
-            position="absolute",
-            style=styles.border,
-            z_index="10",
         ),
-        style=styles.container_project,
+        rx.tablet_only(
+            rx.grid(
+                rx.grid_item(
+                    img(
+                        img_url,
+                        img_alt,
+                        border_top_left_radius=styles.Size.SMALL.value,
+                        opacity="0.7",
+                        bg=Color.PRIMARY.value,
+                    ),
+                    border_top_left_radius=styles.Size.SMALL.value,
+                ),
+                rx.grid_item(
+                    card(
+                        title,
+                        *card_body,
+                    ),
+                    position="relative",
+                    padding=styles.Size.MEDIUM.value,
+                    border_top_left_radius=styles.Size.SMALL.value,
+                    border_bottom_left_radius=styles.Size.SMALL.value,
+                ),
+                template_rows="repeat(2, 1fr)",
+                max_width="22em",
+                height="100%",
+                style=styles.container_project,
+                border=f"0.2em solid {Color.SECUNDARY.value}",
+            ),
+        ),
+        rx.mobile_only(
+            rx.grid(
+                rx.grid_item(
+                    img(
+                        img_url,
+                        img_alt,
+                        border_top_left_radius=styles.Size.SMALL.value,
+                        opacity="0.7",
+                        bg=Color.PRIMARY.value,
+                    ),
+                    border_top_left_radius=styles.Size.SMALL.value,
+                ),
+                rx.grid_item(
+                    card(
+                        title,
+                        *card_body,
+                    ),
+                    position="relative",
+                    padding=styles.Size.MEDIUM.value,
+                    border_top_left_radius=styles.Size.SMALL.value,
+                    border_bottom_left_radius=styles.Size.SMALL.value,
+                ),
+                template_rows="1fr 1.5fr",
+                max_width="16em",
+                height="100%",
+                style=styles.container_project,
+                border=f"0.2em solid {Color.SECUNDARY.value}",
+            ),
+        ),
     )
