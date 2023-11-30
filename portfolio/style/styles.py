@@ -1,7 +1,7 @@
 import reflex as rx
 from enum import Enum
 
-from portfolio.style.colors import Color
+from portfolio.style.colors import Color, TextColor
 from portfolio.style.fonts import Font
 
 """
@@ -27,9 +27,11 @@ class Size(Enum):
 
 BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
-    "background_color": Color.BACKGROUND.value,
     "line_height": Size.LARGE.value,
+    "color": TextColor.BODY.value,
+    "background_color": Color.BACKGROUND.value,
     rx.Link: {
+        "font_weight": "bold",
         "_hover": {
             "color": Color.SECUNDARY_LIGHT.value,
         },
@@ -40,7 +42,9 @@ BASE_STYLE = {
 }
 
 
-navbar_title_style = dict(font_size=Size.LARGE.value)
+navbar_title_style = dict(
+    font_size=Size.LARGE.value,
+)
 
 
 border = dict(
