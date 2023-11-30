@@ -21,7 +21,9 @@ class Size(Enum):
     DEFAULT = "1em"
     LARGE = "1.5em"
     BIG = "2em"
+    XL = "3em"
     VERY_BIG = "4em"
+    HUGE = "6em"
     EXTREME_BIG = "8em"
 
 
@@ -60,4 +62,21 @@ footer = dict(
     margin_bottom=Size.DEFAULT.value,
     margin_x=Size.DEFAULT.value,
     text_align="center",
+)
+
+header_title_style = dict(
+    color=TextColor.TITLE.value,
+    font_size=Size.BIG.value,
+    font_weight="bold",
+)
+
+social_media = dict(
+    width="100%",
+    height="100%",
+    padding=Size.SMALL.value,
+    border_radius=Size.SMALL.value,
+    bg=Color.PRIMARY.value,
+    _hover=dict(
+        bg=Color.PRIMARY_LIGHT.value,
+    ),
 )

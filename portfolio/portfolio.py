@@ -10,7 +10,7 @@ def index() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
-                # header(),
+                header(),
             ),
         ),
         footer(),
