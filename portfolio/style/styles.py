@@ -2,6 +2,7 @@ import reflex as rx
 from enum import Enum
 
 from portfolio.style.colors import Color
+from portfolio.style.fonts import Font
 
 """
 Convencion de estilos
@@ -25,6 +26,9 @@ class Size(Enum):
 
 
 BASE_STYLE = {
+    "font_family": Font.DEFAULT.value,
+    "background_color": Color.BACKGROUND.value,
+    "line_height": Size.LARGE.value,
     rx.Link: {
         "_hover": {
             "color": Color.SECUNDARY_LIGHT.value,
