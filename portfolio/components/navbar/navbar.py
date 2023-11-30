@@ -196,6 +196,5 @@ def navbar() -> rx.Component:
                 padding_y=Size.DEFAULT.value,
             ),
         ),
-        style=styles.navbar,
         box_shadow=f"1px 0 4px {Color.PRIMARY_LIGHT.value}",
     )
