@@ -26,6 +26,7 @@ def footer() -> rx.Component:
                 color=Color.SECUNDARY.value,
                 text_decoration="underline",
             ),
+            padding_top=styles.Size.SMALL.value,
             margin_y=styles.Size.ZERO.value,
         ),
         rx.text(
