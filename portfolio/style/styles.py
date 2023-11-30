@@ -46,6 +46,12 @@ BASE_STYLE = {
     },
 }
 
+navbar = dict(
+    position="sticky",
+    z_index="999",
+    top="0",
+    bg=Color.BACKGROUND.value,
+)
 
 navbar_title_style = dict(
     font_size=Size.LARGE.value,
