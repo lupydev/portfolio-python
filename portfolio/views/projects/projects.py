@@ -17,14 +17,16 @@ def projects() -> rx.Component:
                 margin_bottom=styles.Size.SMALL.value,
                 padding_top=styles.Size.VERY_BIG.value,
             ),
+            margin_x=styles.Size.VERY_BIG.value,
         ),
         rx.mobile_only(
             rx.heading(
                 "Portafolio",
                 style=styles.header_title_style,
                 align_self="start",
+                margin_x=styles.Size.DEFAULT.value,
                 margin_bottom=styles.Size.SMALL.value,
-                padding_top=styles.Size.BIG.value,
+                padding_top=styles.Size.XL.value,
             ),
         ),
         rx.vstack(
@@ -55,5 +57,6 @@ def projects() -> rx.Component:
             border=styles.border,
         ),
         align_items="start",
+        gap=styles.Size.DEFAULT.value,
         id="portafolio",
     )

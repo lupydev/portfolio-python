@@ -3,6 +3,7 @@ import portfolio.style.styles as styles
 from portfolio.components.navbar.navbar import navbar
 from portfolio.components.footer.footer import footer
 from portfolio.views.header.header import header
+from portfolio.views.projects.projects import projects
 
 
 def index() -> rx.Component:
@@ -11,6 +12,8 @@ def index() -> rx.Component:
         rx.center(
             rx.vstack(
                 header(),
+                projects(),
+                width="100%",
             ),
         ),
         footer(),

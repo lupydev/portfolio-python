@@ -32,6 +32,9 @@ BASE_STYLE = {
     "line_height": Size.LARGE.value,
     "color": TextColor.BODY.value,
     "background_color": Color.BACKGROUND.value,
+    rx.Heading: {
+        "color": TextColor.TITLE.value,
+    },
     rx.Link: {
         "font_weight": "bold",
         "_hover": {
@@ -68,6 +71,17 @@ header_title_style = dict(
     color=TextColor.TITLE.value,
     font_size=Size.BIG.value,
     font_weight="bold",
+)
+
+heading_title_style = dict(
+    font_size=Size.LARGE.value,
+)
+
+container_project = dict(
+    border_top_left_radius=Size.DEFAULT.value,
+    border_bottom_left_radius=Size.DEFAULT.value,
+    bg=Color.BACKGROUND_CONTAINER.value,
+    box_shadow=f"-{Size.DEFAULT.value} -{Size.DEFAULT.value} {Color.PRIMARY.value}",
 )
 
 social_media = dict(
