@@ -22,7 +22,6 @@ def footer() -> rx.Component:
                     tag="external_link",
                 ),
                 href="https://reflex.dev/",
-                font_weight="bold",
                 color=Color.SECUNDARY.value,
                 text_decoration="underline",
             ),
