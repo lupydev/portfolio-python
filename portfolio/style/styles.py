@@ -19,6 +19,7 @@ class Size(Enum):
     SMALL = "0.5em"
     MEDIUM = "0.8em"
     DEFAULT = "1em"
+    MIDDLE = "1.3em"
     LARGE = "1.5em"
     BIG = "2em"
     XL = "3em"
@@ -99,4 +100,23 @@ social_media = dict(
     _hover=dict(
         bg=Color.PRIMARY_LIGHT.value,
     ),
+)
+
+experience_left = dict(
+    padding=Size.MEDIUM.value,
+    align_items="end",
+    border_bottom_right_radius=Size.DEFAULT.value,
+    border_right=f"0.3em solid {Color.PRIMARY.value}",
+    border_bottom=f"0.3em solid {Color.PRIMARY.value}",
+    text_align="end",
+    bg=Color.BACKGROUND_CONTAINER.value,
+)
+
+experience_right = dict(
+    padding=Size.MEDIUM.value,
+    border_bottom_left_radius=Size.DEFAULT.value,
+    border_left=f"0.3em solid {Color.PRIMARY.value}",
+    border_bottom=f"0.3em solid {Color.PRIMARY.value}",
+    align_items="start",
+    bg=Color.BACKGROUND_CONTAINER.value,
 )

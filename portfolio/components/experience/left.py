@@ -32,10 +32,5 @@ def experience_left(
             border_color=Color.PRIMARY.value,
         ),
         *list_icon,
-        padding=styles.Size.MEDIUM.value,
-        align_items="end",
-        border_bottom_right_radius=styles.Size.DEFAULT.value,
-        border_right=f"0.3em solid {Color.PRIMARY.value}",
-        border_bottom=f"0.3em solid {Color.PRIMARY.value}",
-        text_align="end",
+        style=styles.experience_left,
     )

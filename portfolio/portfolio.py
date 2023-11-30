@@ -2,6 +2,7 @@ import reflex as rx
 import portfolio.style.styles as styles
 from portfolio.components.navbar.navbar import navbar
 from portfolio.components.footer.footer import footer
+from portfolio.views.experience.experience import experience
 from portfolio.views.header.header import header
 from portfolio.views.projects.projects import projects
 
@@ -13,6 +14,7 @@ def index() -> rx.Component:
             rx.vstack(
                 header(),
                 projects(),
+                experience(),
                 width="100%",
             ),
         ),
