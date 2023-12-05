@@ -45,6 +45,28 @@ BASE_STYLE = {
     rx.Divider: {
         "border_color": Color.SECUNDARY_LIGHT.value,
     },
+    rx.Input: {
+        "border_radius": Size.ZERO.value,
+        "border": f"0.3em solid {Color.PRIMARY_LIGHT.value}",
+        "color": TextColor.TITLE.value,
+        "bg": Color.PRIMARY.value,
+    },
+    rx.TextArea: {
+        "border_radius": Size.ZERO.value,
+        "border": f"0.3em solid {Color.PRIMARY_LIGHT.value}",
+        "color": TextColor.TITLE.value,
+        "bg": Color.PRIMARY.value,
+    },
+    rx.ModalContent: {
+        "padding": Size.BIG.value,
+    },
+    rx.ModalHeader: {
+        "color": Color.SECUNDARY_LIGHT.value,
+        "font_weight": "bold",
+    },
+    rx.ModalBody: {
+        "color": TextColor.TITLE.value,
+    },
 }
 
 navbar = dict(
@@ -119,4 +141,9 @@ experience_right = dict(
     border_bottom=f"0.3em solid {Color.PRIMARY.value}",
     align_items="start",
     bg=Color.BACKGROUND_CONTAINER.value,
+)
+
+button_form = dict(
+    width="100%",
+    border_radius=Size.ZERO.value,
 )

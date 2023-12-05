@@ -33,6 +33,10 @@ class FormState(State):
         else:
             return len(self.message) < 10
 
+    @rx.var
+    def is_button_disable(self) -> bool:
+        return len(self.name) < 2 or len(self.email) < 6 or len(self.message) < 10
+
     def handle_submit(self, form_data: dict):
         """Handle the data sending to API."""
         self.form_data = form_data
@@ -40,11 +44,8 @@ class FormState(State):
         self.show_modal = not self.show_modal
         yield FormState.send_email(form_data)
         yield FormState.toggle_modal
-        return [rx.set_value(field_id, "") for field_id in form_data]
 
-    # @rx.background
     def send_email(self, form_data: dict):
-        # async with self:
         self.mensaje = ""
         try:
             # Configuración del servidor de email
@@ -78,14 +79,10 @@ class FormState(State):
         except Exception as e:
             self.mensaje = f"Error al enviar el correo: {e}"
 
-        # finally:
-        #     return [rx.set_value(field_id, "") for field_id in form_data]
-
-    # @rx.background
-    def toggle_modal(self):
-        # async with self:
-        asyncio.sleep(2)
-        self.show_modal = False
+    @rx.background
+    async def toggle_modal(self):
+        await asyncio.sleep(1)
+        await self.close_modal()
 
     async def close_modal(self):
         async with self:
