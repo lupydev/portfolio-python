@@ -15,7 +15,7 @@ def contac_form() -> rx.Component:
                 rx.input(
                     placeholder="Nombre",
                     id="name",
-                    on_blur=FormState.set_name,
+                    on_change=FormState.set_name,
                     focus_border_color=Color.PRIMARY.value,
                     error_border_color=Color.PRIMARY_LIGHT.value,
                     is_required=True,
@@ -33,7 +33,7 @@ def contac_form() -> rx.Component:
                     placeholder="hello@lupy.dev",
                     type_="email",
                     id="email",
-                    on_blur=FormState.set_email,
+                    on_change=FormState.set_email,
                     focus_border_color=Color.PRIMARY.value,
                     error_border_color=Color.PRIMARY_LIGHT.value,
                     is_required=True,
@@ -49,7 +49,7 @@ def contac_form() -> rx.Component:
             rx.form_control(
                 rx.text_area(
                     placeholder="Hola Lupy!\n\nMe encantaría que me ayudes a volver realidad este proyecto.",
-                    on_blur=FormState.set_message,
+                    on_change=FormState.set_message,
                     height="10em",
                     focus_border_color=Color.PRIMARY.value,
                     error_border_color=Color.PRIMARY_LIGHT.value,
@@ -89,5 +89,4 @@ def contac_form() -> rx.Component:
         gap=styles.Size.SMALL.value,
         on_submit=FormState.handle_submit,
         reset_on_submit=True,
-        handle_submit_unique_name="tablet-desktop",
     )
