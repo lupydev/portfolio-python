@@ -2,7 +2,7 @@ import reflex as rx
 from enum import Enum
 
 from portfolio.style.colors import Color, TextColor
-from portfolio.style.fonts import Font
+from portfolio.style.fonts import Font, FontWeight
 
 """
 Convencion de estilos
@@ -12,6 +12,10 @@ Convencion de estilos
     4. Visuals
     5. Miscelaneos
 """
+
+STYLESHEETS = [
+    "https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+]
 
 
 class Size(Enum):
@@ -30,6 +34,7 @@ class Size(Enum):
 
 BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
+    "font_weight": FontWeight.MEDIUM.value,
     "line_height": Size.LARGE.value,
     "color": TextColor.BODY.value,
     "background_color": Color.BACKGROUND.value,
