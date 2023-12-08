@@ -28,22 +28,31 @@ def experience() -> rx.Component:
                             list_icon_left(
                                 "arrow_left",
                                 Color.SECUNDARY.value,
-                                "Participé en la creación de un MVP desde cero",
+                                "Colaboré activamente en la creación y desarrollo integral de un MVP desde sus etapas iniciales, contribuyendo al diseño y ejecución desde cero.",
+                            ),
+                            rx.divider(
+                                border_color=Color.PRIMARY.value,
                             ),
                             list_icon_left(
                                 "arrow_left",
                                 Color.SECUNDARY.value,
-                                "Apoyé en la creación del modelo entidad-relación de la base de datos.",
+                                "Desempeñé un papel fundamental en la elaboración del modelo entidad-relación de la base de datos.",
+                            ),
+                            rx.divider(
+                                border_color=Color.PRIMARY.value,
                             ),
                             list_icon_left(
                                 "arrow_left",
                                 Color.SECUNDARY.value,
-                                "Desarrollé e implementé una de las RESTful APIs del MVP.",
+                                "Diseñé y llevé a cabo la implementación de una de las RESTful APIs esenciales para el éxito del MVP.",
+                            ),
+                            rx.divider(
+                                border_color=Color.PRIMARY.value,
                             ),
                             list_icon_left(
                                 "arrow_left",
                                 Color.SECUNDARY.value,
-                                "Utilicé SCRUM para el desarrollo de mis actividades.",
+                                "Apliqué metodología SCRUM de manera efectiva en la planificación y ejecución de mis tareas.",
                             ),
                         ),
                         height="fit-content",
@@ -110,22 +119,31 @@ def experience() -> rx.Component:
                     list_icon_right(
                         "arrow_right",
                         Color.SECUNDARY.value,
-                        "Participé en la creación de un MVP desde cero.",
+                        "Colaboré activamente en la creación y desarrollo integral de un MVP desde sus etapas iniciales, contribuyendo al diseño y ejecución desde cero.",
+                    ),
+                    rx.divider(
+                        border_color=Color.PRIMARY.value,
                     ),
                     list_icon_right(
                         "arrow_right",
                         Color.SECUNDARY.value,
-                        "Apoyé en la creación del modelo entidad-relación de la base de datos.",
+                        "Desempeñé un papel fundamental en la elaboración del modelo entidad-relación de la base de datos.",
+                    ),
+                    rx.divider(
+                        border_color=Color.PRIMARY.value,
                     ),
                     list_icon_right(
                         "arrow_right",
                         Color.SECUNDARY.value,
-                        "Desarrollé e implementé una de las RESTful APIs del MVP.",
+                        "Diseñé y llevé a cabo la implementación de una de las RESTful APIs esenciales para el éxito del MVP.",
+                    ),
+                    rx.divider(
+                        border_color=Color.PRIMARY.value,
                     ),
                     list_icon_right(
                         "arrow_right",
                         Color.SECUNDARY.value,
-                        "Utilicé SCRUM para el desarrollo de mis actividades.",
+                        "Apliqué metodología SCRUM de manera efectiva en la planificación y ejecución de mis tareas.",
                     ),
                 ),
                 margin_x=styles.Size.DEFAULT.value,
