@@ -2,6 +2,7 @@ import reflex as rx
 import portfolio.style.styles as styles
 from portfolio.components.navbar.navbar import navbar
 from portfolio.components.footer.footer import footer
+from portfolio.views.contact_form.contact import contact
 from portfolio.views.experience.experience import experience
 from portfolio.views.header.header import header
 from portfolio.views.projects.projects import projects
@@ -15,6 +16,7 @@ def index() -> rx.Component:
                 header(),
                 projects(),
                 experience(),
+                contact(),
                 width="100%",
             ),
         ),
@@ -24,6 +26,7 @@ def index() -> rx.Component:
 
 
 app = rx.App(
+    stylesheets=styles.STYLESHEETS,
     style=styles.BASE_STYLE,
 )
 app.add_page(
