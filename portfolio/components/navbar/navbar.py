@@ -1,13 +1,13 @@
 import reflex as rx
 from portfolio.components.list.list_left import list_icon_left
 from portfolio.components.list.list_right import list_icon_right
-from portfolio.state.base import State
+from portfolio.state.form_data import FormState
 from portfolio.style.colors import Color
 from portfolio.style.styles import Size
 import portfolio.style.styles as styles
 
 
-class DrawerState(State):
+class DrawerState(FormState):
     show_right: bool = False
     show_top: bool = False
 

@@ -3,11 +3,11 @@ import asyncio
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from portfolio.state.base import State
 from decouple import config
 
 
-class FormState(State):
+class FormState(rx.State):
+    name: str
     email: str
     message: str
     modal_message: str
